@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form name="calculator">
+        <input type="text" id="output" name="text" readonly />
+      </form>
+      <div class="btns">
+        <button onclick="document.calculator.text.value=Math.sin(document.calculator.text.value)">Sin</button>
+        <button onclick="document.calculator.text.value=Math.cos(document.calculator.text.value)">Cos</button>
+        <button onclick="document.calculator.text.value=Math.tan(document.calculator.text.value)">Tan</button>
+        <button onclick="document.calculator.text.value=Math.log(document.calculator.text.value)">Log</button>
+
+        <button onclick="document.calculator.text.value=Math.pow(document.calculator.text.value,2)">x<sup>2</sup></button>
+        <button onclick="document.calculator.text.value=Math.pow(document.calculator.text.value,3)">x<sup>3</sup></button>
+        <button onclick="document.calculator.text.value=Math.sqrt(document.calculator.text.value)">&radic;</button>
+        <button onclick="document.calculator.text.value=Math.cbrt(document.calculator.text.value)">&#8731;</button>
+
+        <button onclick="document.calculator.text.value+='1'">1</button>
+        <button onclick="document.calculator.text.value+='2'">2</button>
+        <button onclick="document.calculator.text.value+='3'">3</button>
+        <button onclick="document.calculator.text.value+='4'">4</button>
+
+        <button onclick="document.calculator.text.value+='5'">5</button>
+        <button onclick="document.calculator.text.value+='6'">6</button>
+        <button onclick="document.calculator.text.value+='7'">7</button>
+        <button onclick="document.calculator.text.value+='8'">8</button>
+
+        <button onclick="document.calculator.text.value+='9'">9</button>
+        <button onclick="document.calculator.text.value+='0'">0</button>
+        <button onclick="document.calculator.text.value+='.'">.</button>
+        <button onclick="document.calculator.text.value+='*'">*</button>
+
+        <button onclick="document.calculator.text.value+='+'">+</button>
+        <button onclick="document.calculator.text.value+='-'">-</button>
+        <button onclick="document.calculator.text.value+='/'">/</button>
+        <button onclick="document.calculator.text.value+='%'">%</button>
+
+        <button onclick="document.calculator.text.value=''" class="reset">C</button>
+        <button onclick="del()" class="reset">DEL</button>
+        <button onclick="calculate(document.calculator.text.value)">=</button>
+      </div>
+    </div>
+  </body>
+</html>
