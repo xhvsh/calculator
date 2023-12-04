@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced Calculator</title>
     <link rel="stylesheet" href="./style.css" />
@@ -10,44 +9,43 @@
   </head>
   <body>
     <div class="container">
-      <form name="calculator">
-        <input type="text" id="output" name="text" readonly />
-      </form>
+      <input type="text" readonly class="output" />
       <div class="btns">
-        <button onclick="document.calculator.text.value=Math.sin(document.calculator.text.value)">Sin</button>
-        <button onclick="document.calculator.text.value=Math.cos(document.calculator.text.value)">Cos</button>
-        <button onclick="document.calculator.text.value=Math.tan(document.calculator.text.value)">Tan</button>
-        <button onclick="document.calculator.text.value=Math.log(document.calculator.text.value)">Log</button>
+        <button class="oth" onclick="output.value=Math.sin(output.value)">Sin</button>
+        <button class="oth" onclick="output.value=Math.cos(output.value)">Cos</button>
+        <button class="oth" onclick="output.value=Math.tan(output.value)">Tan</button>
+        <button class="oth" onclick="output.value=Math.log(output.value)">Log</button>
 
-        <button onclick="document.calculator.text.value=Math.pow(document.calculator.text.value,2)">x<sup>2</sup></button>
-        <button onclick="document.calculator.text.value=Math.pow(document.calculator.text.value,3)">x<sup>3</sup></button>
-        <button onclick="document.calculator.text.value=Math.sqrt(document.calculator.text.value)">&radic;</button>
-        <button onclick="document.calculator.text.value=Math.cbrt(document.calculator.text.value)">&#8731;</button>
+        <button class="oth" onclick="output.value=Math.pow(output.value,2)">x<sup>2</sup></button>
+        <button class="oth" onclick="output.value=Math.pow(output.value,3)">x<sup>3</sup></button>
+        <button class="oth" onclick="output.value=Math.sqrt(output.value)">&radic;</button>
+        <button class="oth" onclick="output.value=Math.cbrt(output.value)">&#8731;</button>
 
-        <button onclick="document.calculator.text.value+='1'">1</button>
-        <button onclick="document.calculator.text.value+='2'">2</button>
-        <button onclick="document.calculator.text.value+='3'">3</button>
-        <button onclick="document.calculator.text.value+='4'">4</button>
+        <button class="num" onclick="output.value+='1'">1</button>
+        <button class="num" onclick="output.value+='2'">2</button>
+        <button class="num" onclick="output.value+='3'">3</button>
+        <button class="num" onclick="output.value+='4'">4</button>
 
-        <button onclick="document.calculator.text.value+='5'">5</button>
-        <button onclick="document.calculator.text.value+='6'">6</button>
-        <button onclick="document.calculator.text.value+='7'">7</button>
-        <button onclick="document.calculator.text.value+='8'">8</button>
+        <button class="num" onclick="output.value+='5'">5</button>
+        <button class="num" onclick="output.value+='6'">6</button>
+        <button class="num" onclick="output.value+='7'">7</button>
+        <button class="num" onclick="output.value+='8'">8</button>
 
-        <button onclick="document.calculator.text.value+='9'">9</button>
-        <button onclick="document.calculator.text.value+='0'">0</button>
-        <button onclick="document.calculator.text.value+='.'">.</button>
-        <button onclick="document.calculator.text.value+='*'">*</button>
+        <button class="num" onclick="output.value+='9'">9</button>
+        <button class="num" onclick="output.value+='0'">0</button>
+        <button class="oth" onclick="output.value+='.'">.</button>
+        <button class="oth" onclick="output.value+='*'">*</button>
 
-        <button onclick="document.calculator.text.value+='+'">+</button>
-        <button onclick="document.calculator.text.value+='-'">-</button>
-        <button onclick="document.calculator.text.value+='/'">/</button>
-        <button onclick="document.calculator.text.value+='%'">%</button>
+        <button class="oth" onclick="output.value+='+'">+</button>
+        <button class="oth" onclick="output.value+='-'">-</button>
+        <button class="oth" onclick="output.value+='/'">/</button>
+        <button class="oth" onclick="output.value+='%'">%</button>
 
-        <button onclick="document.calculator.text.value=''" class="reset">C</button>
-        <button onclick="del()" class="reset">DEL</button>
-        <button onclick="calculate(document.calculator.text.value)">=</button>
+        <button class="res" onclick="output.value=''">C</button>
+        <button class="res" onclick="del()">DEL</button>
+        <button class="sub" onclick="calculate(output.value)">=</button>
       </div>
     </div>
+    <p>Calculator made by <a href="https://github.com/xhvsh" target="_blank">xhvsh</a></p>
   </body>
 </html>

@@ -1,15 +1,15 @@
-// DELETE
+const output = document.querySelector('.output');
+
 function del() {
-  var output = document.getElementById("output").value;
-  document.getElementById("output").value = output.substr(0, output.length - 1);
+  var outputValue = output.value;
+  output.value = outputValue.substr(0, outputValue.length - 1);
 }
 
-// CALCULATE
 function calculate(expression) {
   try {
     var result = eval(expression);
-    document.calculator.text.value = result;
+    output.value = result;
   } catch (error) {
-    document.calculator.text.value = 'Błąd';
+    output.value = 'Error';
   }
 }

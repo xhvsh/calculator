@@ -1,76 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: sans-serif;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   outline: none;
 }
 body {
-  height: 100vh;
   background: #222;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
 }
 .container {
-  width: 400px;
-  height: 380px;
-  background: #444;
-  border-radius: 10px;
-  padding: 10px;
+  background: #333;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-#output {
+input {
   width: 100%;
-  height: 50px;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
-  background: #ddd;
-  font-size: 1.9rem;
   text-align: right;
-  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background: #222;
+  color: #ddd;
 }
 .btns {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
 }
 button {
-  width: 90px;
-  height: 40px;
-  padding: 8px;
-  margin: 1px 1px;
-  text-align: center;
-  cursor: pointer;
+  padding: 3px 10px;
+  border-radius: 5px;
   border: none;
-  background: #ddd;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  color: #ddd;
   font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 button:hover {
-  background: #aaa;
+  filter: brightness(0.8);
 }
-button:nth-child(1) {
-  border-top-left-radius: 10px;
+button:last-child {
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
-button:nth-child(4) {
-  border-top-right-radius: 10px;
+.oth {
+  background: #555;
 }
-button:nth-child(25) {
-  border-bottom-left-radius: 10px;
+.num {
+  background: #777;
 }
-button:nth-child(27) {
-  width: 182px;
-  border-bottom-right-radius: 10px;
+.res {
+  background: #900;
 }
-.reset {
-  background: #8b0000;
-  color: #fff;
+.sub {
+  background: #0054b5;
 }
-.reset:hover {
-  background: #d90000;
+p {
+  color: #999;
+}
+a {
+  color: #00b2b5;
 }
